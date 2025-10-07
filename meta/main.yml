@@ -3,7 +3,7 @@ galaxy_info:
   role_name: postgres
   namespace: kevincoakley
   author: Kevin Coakley
-  description: Install Postgres 10, 11, 12, 13, 14, or 15
+  description: Install Postgres 10, 11, 12, 13, 14, 15, or 17 (EL8/EL9 support for 17)
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
@@ -27,6 +27,7 @@ galaxy_info:
     - name: EL
       versions:
         - "8"
+        - "9"
     - name: Ubuntu
       versions:
         - focal

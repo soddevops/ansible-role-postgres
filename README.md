@@ -3,7 +3,13 @@ ansible-role-postgres
 
 ![](https://github.com/kevincoakley/ansible-role-postgres/workflows/Molecule%20Test/badge.svg)
 
-Install Postgres 10, 11, 12, 13, 14, & 15. Tested with Postgres 10, 11, 12, 13, 14, & 15 and CentOS 8, Ubuntu 20.04 & Ubuntu 22.04.
+Install Postgres 10, 11, 12, 13, 14, 15, & 17. Tested with Postgres 10-15 and CentOS/RHEL 8, Ubuntu 20.04 & Ubuntu 22.04. Postgres 17 support added for EL8/EL9.
+
+Notes for EL8/EL9
+-----------------
+
+- This role uses the upstream PostgreSQL Global Development Group (PGDG) yum repository by installing the `pgdg-redhat-repo` RPM for the target EL major version. For EL9 this uses the same RPM location pattern as EL8; the role installs the RPM from: `https://download.postgresql.org/pub/repos/yum/reporpms/EL-<major>-x86_64/pgdg-redhat-repo-latest.noarch.rpm`.
+- On EL8 and EL9 the OS ships modular streams for PostgreSQL; the role disables the distro `postgresql` module via `dnf module disable postgresql` before installing the PGDG packages so the expected PG packages can be installed.
 
 Requirements
 ------------

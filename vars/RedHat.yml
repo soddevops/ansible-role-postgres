@@ -3,6 +3,9 @@ postgresql_packages:
   15:
     - postgresql15-server
     - postgresql15
+  17:
+    - postgresql17-server
+    - postgresql17
   14:
     - postgresql14-server
     - postgresql14
@@ -21,6 +24,7 @@ postgresql_packages:
 
 postgresql_service:
   15: postgresql-15
+  17: postgresql-17
   14: postgresql-14
   13: postgresql-13
   12: postgresql-12
@@ -28,6 +32,7 @@ postgresql_service:
   10: postgresql-10
 postgresql_setup_path:
   15: /usr/pgsql-15/bin/postgresql-15-setup
+  17: /usr/pgsql-17/bin/postgresql-17-setup
   14: /usr/pgsql-14/bin/postgresql-14-setup
   13: /usr/pgsql-13/bin/postgresql-13-setup
   12: /usr/pgsql-12/bin/postgresql-12-setup
@@ -35,6 +40,7 @@ postgresql_setup_path:
   10: /usr/pgsql-10/bin/postgresql-10-setup
 postgresql_data_path:
   15: /var/lib/pgsql/15/data
+  17: /var/lib/pgsql/17/data
   14: /var/lib/pgsql/14/data
   13: /var/lib/pgsql/13/data
   12: /var/lib/pgsql/12/data
@@ -42,6 +48,7 @@ postgresql_data_path:
   10: /var/lib/pgsql/10/data
 postgresql_conf_path:
   15: /var/lib/pgsql/15/data
+  17: /var/lib/pgsql/17/data
   14: /var/lib/pgsql/14/data
   13: /var/lib/pgsql/13/data
   12: /var/lib/pgsql/12/data
