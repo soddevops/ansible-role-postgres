@@ -1,11 +1,8 @@
 ---
 - name: Gather all facts once
-  gather_facts: false
-  tasks:
-    - name: Gather facts for all hosts
-      ansible.builtin.setup:
-        gather_subset:
-          -  'distribution'
+  ansible.builtin.setup:
+    gather_subset:
+      -  'distribution'
 
 - name: Include OS family specific variables
   include_vars: "{{ ansible_os_family }}.yml"
